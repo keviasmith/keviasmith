@@ -62,8 +62,8 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
+			var positionx=0
+var points=0
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,8 +71,28 @@
 			turn it around! 
 			*/
 			function update() {
-				
+				moveBoxTo(positionx)
+// When you first create the Variable...
+var positionX = 0;
 
+// during update... 
+// Frame 1
+positionX = 0 + 10;         // positionX = 10
+moveBoxTo(positionX);
+
+// Frame 2
+positionX = 10 + 10;         // positionX = 20
+moveBoxTo(positionX);
+
+// Frame 3
+positionX = 20 + 10;         // positionX = 30
+moveBoxTo(positionX);
+
+// Frame 4
+positionX = 30 + 10;         // positionX = 40
+moveBoxTo(positionX);
+
+// so on...
 			};
 
 			/* 
@@ -81,10 +101,23 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+				positionX = 0;
+   changeBoxText(1);
+   function handleBoxClick() {
+    positionX = 0;
+	changeBoxText(points);
+	function update() {
+   positionX = positionX + 10;
+   moveBoxTo(positionX);
+};
+}
 
+    // your code to increase the points variable by 1
 
-			};
+    changeBoxText(points);
+};
+
+		};
 		})();
 	</script>
 </body>
